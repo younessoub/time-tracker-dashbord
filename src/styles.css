@@ -1,0 +1,184 @@
+:root {
+  --fontSize: 18px; /*(card titles e.g. Work, Play)*/
+  --blue: hsl(246, 80%, 60%);
+  --lightRed/* (work)*/: hsl(15, 100%, 70%);
+  --softBlue/*(play)*/: hsl(195, 74%, 62%);
+  --lightRedTwo/*(study)*/: hsl(348, 100%, 68%);
+  --limeGreen/*(exercise)*/: hsl(145, 58%, 55%);
+  --violet/*(social)*/: hsl(264, 64%, 52%);
+  --softOrange/*(self care)*/: hsl(43, 84%, 65%);
+  --veryDarkBlue: hsl(226, 43%, 10%);
+  --darkBlue: hsl(235, 46%, 20%);
+  --desaturatedBlue: hsl(235, 45%, 61%);
+  --paleBlue: hsl(236, 100%, 87%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--veryDarkBlue);
+  min-height: 100vh;
+}
+
+.App {
+  margin-top: 50px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.profile {
+  background-color: var(--darkBlue);
+  border-radius: 20px;
+  height: 180px;
+  margin-bottom: 20px;
+
+  /*grid-row: 1 / span 2;*/
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.info {
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 130px;
+  z-index: 2;
+}
+
+.imgContainer {
+  border: 4px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.info img {
+  width: 70px;
+}
+
+.period {
+  display: flex;
+  justify-content: space-around;
+  color: var(--paleBlue);
+  margin-top: 16px;
+}
+
+.period span {
+  cursor: pointer;
+}
+
+.period span:hover {
+  color: white;
+}
+
+.period span.active {
+  color: white;
+}
+
+.attribution {
+  margin-top: 50px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 900px) {
+  .App {
+    display: flex;
+    margin-top: 0;
+  }
+  .profile {
+    flex: 0.5;
+    height: unset;
+    margin-bottom: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    padding-bottom: 20px;
+  }
+  .period {
+    flex-direction: column;
+    padding-left: 30px;
+    min-height: 100px;
+  }
+  .grid {
+    flex: 1.5;
+  }
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 400px;
+    padding: 40px 40px 60px 30px;
+  }
+  .info h2 {
+    font-size: 40px;
+  }
+  .imgContainer {
+    margin-bottom: 30px;
+  }
+}
+
+/*# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 300, 400, 500
+
+*/
